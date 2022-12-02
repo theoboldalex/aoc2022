@@ -3,8 +3,7 @@ import requests
 from dotenv import load_dotenv
 
 def process_data(data: str) -> list:
-    elves = [l.split("\n") for l in data.strip().split("\n\n")]
-    return [sum([int(i) for i in x]) for x in elves]
+    return [sum([int(i) for i in l.split("\n")]) for l in data.strip().split("\n\n")]
 
 def get_top(data: str, limit: int = 1) -> list:
     l = process_data(data)
