@@ -1,4 +1,4 @@
-from day_1 import process_data
+from day_1 import get_top
 
 ########## TESTS ############
 sample_data = '''
@@ -17,5 +17,9 @@ sample_data = '''
 
 10000
 '''
-def test_max_calories():
-    assert max(process_data(sample_data)) == 24000
+
+def test_get_top():
+    assert get_top(sample_data)[0] == 24000
+
+def test_get_top_three():
+    assert sum(get_top(sample_data, 3)) == 45000
