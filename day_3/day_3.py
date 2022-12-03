@@ -36,10 +36,6 @@ def main():
     part_two = process_part_two(r.text)
     print(f"part 1: {sum([encode_char_to_int(get_dupe_item(i)) for i in part_one])}")
     print(f"part 2: {sum([encode_char_to_int(get_common_item(i)) for i in part_two])}")
-    # read from input file
-    # get the dupe for each bag
-    # encode them all
-    # sum the resulting list
 
 if __name__ == "__main__":
     main()

@@ -2,6 +2,7 @@ from day_3 import (
     process_part_one,
     process_part_two,
     get_dupe_item,
+    get_common_item,
     encode_char_to_int
 )
 
@@ -45,5 +46,6 @@ def test_encode_char_to_int():
     char = get_dupe_item(data[0])
     assert encode_char_to_int(char) == 16 # "p".charCode() - 96
 
-def test_part_two():
-    pass
+def test_get_common_item():
+    data = get_part_two_data()
+    assert get_common_item(data[0]) == 'r'
